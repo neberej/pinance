@@ -42,6 +42,7 @@ def make_request(ticker, expiry):
 
 
 def extract_options_data(response, type, strike):
+  #print(response['optionChain']['result'][0]['options'][0])
   if type == 'C':
     calls = response['optionChain']['result'][0]['options'][0]['calls']
     for call in calls:
@@ -55,16 +56,6 @@ def extract_options_data(response, type, strike):
         return put
 
   return []
-
-
-def get_quotes(ticker):
-  response = make_request(ticker, None)
-  try:
-    quotes_data = response['optionChain']['result'][0]['quote'] # quote is quotes
-    return quotes_data
-  except:
-    return []
-
 
 def get_options(ticker, a, b, c):
   response = make_request(ticker, a)
