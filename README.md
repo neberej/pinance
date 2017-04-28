@@ -5,16 +5,12 @@ A collection of python modules to get finance data (stock quotes, news and optio
 
 ## Installation
 
-* From PyPI with pip
-
-```
-pip install pinance
-```
 
 * From repo
 
 ```
 $ git clone git://github.com/neberej/pinance.git
+cd pinance
 ```
 
 ## Modules list
