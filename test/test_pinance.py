@@ -20,5 +20,5 @@ stock.get_news()
 print(stock.news_data)
 
 # Option
-stock.get_options('2017-04-14', 'P', 10)
+stock.get_options('2017-05-05', 'P', 10)
 print(stock.options_data)

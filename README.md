@@ -15,7 +15,7 @@ cd pinance
 
 ## Modules list
 
-* yfinance - Gets stock data from Yahoo Finance API
+* yfinance - Gets stock data from Yahoo API
 * yfinance2 - Gets options data from Yahoo Finance API
 * gfinance - Gets stock data from Google Finance
 * gfinance.py - Gets news from Google Finance Page
@@ -210,7 +210,7 @@ print(stock.news_data)
 
 **Get options data**
 ```python
-stock.get_options('2017-04-14', 'P', 10)
+stock.get_options('2017-05-05', 'P', 10)
 print(stock.options_data)
 ```
 

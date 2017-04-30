@@ -1,4 +1,14 @@
 
+"""
+
+Python module for getting stock data
+@module: pinance
+@author: neberej (https://github.com/neberej)
+@version: 1.00
+
+"""
+
+# Dependencies
 import sys
 sys.path.append('../pinance/engine')
 
@@ -38,6 +48,7 @@ def combine_objects(a, b, c):
   res = {k:v for k,v in data.items() if v is not None}
   return res
   
+
 # Convert date/time to unix time for options
 def totimestamp(inputdate, epoch=datetime(1970,1,1)):
   dt = datetime.strptime(inputdate, '%Y-%m-%d')
@@ -54,10 +65,8 @@ def options_params(a, b, c):
 
 class Base(object):
 
-
   def __init__(self, symbol):
     self.symbol = symbol
-
 
   def __request_quotes__(self):
     gfinance_data = gfinance.get_quotes(self.symbol)

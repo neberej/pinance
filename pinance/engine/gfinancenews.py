@@ -8,7 +8,6 @@ Python module for getting stock data
 
 """
 
-
 # Dependencies
 import demjson
 import json

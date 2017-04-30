@@ -16,6 +16,7 @@ from datetime import date
 from datetime import timedelta
 import json
 
+
 # Create URL (select query1 or query2 randomly)
 def create_url(ticker, expiry):
   srv = randrange(1, 3, 1)
@@ -23,6 +24,7 @@ def create_url(ticker, expiry):
     return 'https://query{}.finance.yahoo.com/v7/finance/options/{}?&date={}'.format(srv, ticker, expiry)
   else:
     return 'https://query{}.finance.yahoo.com/v7/finance/options/{}'.format(srv, ticker)
+
 
 # Make request to yahoo finance
 def make_request(ticker, expiry):
@@ -56,6 +58,16 @@ def extract_options_data(response, type, strike):
         return put
 
   return []
+
+
+def get_quotes(ticker):
+  response = make_request(ticker, None)
+  try:
+    quotes_data = response['optionChain']['result'][0]['quote'] # quote is quotes
+    return quotes_data
+  except:
+    return []
+
 
 def get_options(ticker, a, b, c):
   response = make_request(ticker, a)

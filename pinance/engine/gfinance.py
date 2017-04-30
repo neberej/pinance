@@ -8,7 +8,6 @@ Python module for getting stock data
 
 """
 
-
 # Dependencies
 import demjson
 import json
@@ -51,6 +50,7 @@ def replaceKeys(quotes):
         qReadableKey[mapping[k]] = q[k]
       quotesWithReadableKey.append(qReadableKey)
   return quotesWithReadableKey
+
 
 # Make request to google finance
 def makeQuotesRequest(symbol):
