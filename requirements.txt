@@ -1,0 +1,6 @@
+pytz
+demjson>=2.2.0
+simplejson>=3.4.1
+datetime>=4.0
+Request>=0.0.0
+urlopen>=1.0.0
