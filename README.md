@@ -3,6 +3,15 @@ pinance
 
 A collection of python modules to get finance data (stock quotes, news and options)
 
+
+## Modules list
+
+* yfinance - Gets stock data from Yahoo API
+* yfinance2 - Gets options data from Yahoo Finance API
+* gfinance - Gets stock data from Google Finance
+* gfinance.py - Gets news from Google Finance Page
+
+
 ## Installation
 
 
@@ -11,14 +20,14 @@ A collection of python modules to get finance data (stock quotes, news and optio
 ```
 $ git clone git://github.com/neberej/pinance.git
 cd pinance
+python setup.py install
 ```
 
-## Modules list
+* From PyPI with pip:
 
-* yfinance - Gets stock data from Yahoo API
-* yfinance2 - Gets options data from Yahoo Finance API
-* gfinance - Gets stock data from Google Finance
-* gfinance.py - Gets news from Google Finance Page
+```
+$ pip install pinance
+```
 
 
 ## Usage

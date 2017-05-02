@@ -9,13 +9,14 @@ Python module for getting stock data
 """
 
 # Dependencies
-import sys
-sys.path.append('../pinance/engine')
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "engine"))
 
 import gfinance
 import gfinancenews
 import yfinance
 import yfinance2
+
 from datetime import datetime, timedelta
 
 millnames = ['','T','M','B','T']
