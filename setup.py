@@ -1,16 +1,17 @@
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 from distutils.core import setup
 setup(
   name = 'pinance',
-  packages = ['pinance'],
-  version = '0.1',
+  version = '0.6a',
+  packages=find_packages(exclude=["contrib", "docs", "test*"]),
+  py_modules=['yfinance', 'yfinance2', 'gfinance', 'gfinancenews'],
   description = 'A collection of python modules to get finance data (stock quotes, news and options)',
   author = 'NT (neberej)',
   author_email = 'mail@vguh.com',
   url = 'https://github.com/neberej/pinance',
-  download_url = 'https://github.com/neberej/pinance/archive/0.1.tar.gz',
+  download_url = 'https://github.com/neberej/pinance/archive/0.6a.tar.gz',
   keywords = ['stock', 'options', 'finance', 'trade', 'market-data', 'python', 'yahoo-finance-api', 'google-finance'],
   classifiers = [
 
@@ -28,6 +29,6 @@ setup(
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
   ],
-  install_requires=['demjson', 'simplejson', 'pytz', 'datetime', 're', 'urllib', 'random', 'Request', 'json', 'urlopen']
+  install_requires=['demjson>=2.2.4', 'simplejson>=3.10.0', 'pytz', 'datetime>=4.2', 'Request>=0.0.0', 'urlopen>=1.0.0']
 )
 
