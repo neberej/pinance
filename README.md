@@ -35,6 +35,8 @@ $ pip install pinance
 
 **Initialize**
 ```python
+from pinance import Pinance
+
 symbol = "AMD"
 stock = Pinance(symbol)
 ```

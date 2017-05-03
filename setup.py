@@ -28,6 +28,6 @@ setup(
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
   ],
-  install_requires=['demjson', 'simplejson', 'pytz', 'datetime', 'Request', 'urlopen']
+  install_requires=['demjson>=2.2.0', 'simplejson>=3.4.1', 'pytz', 'datetime>=4.0', 'Request>=0.0.0', 'urlopen>=1.0.0']
 )
 
