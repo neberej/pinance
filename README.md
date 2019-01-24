@@ -1,3 +1,9 @@
+
+# Update - This module no longer works because both google finance and yahoo finance have been shut down.
+
+
+---
+
 pinance
 =========
 
